@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Приглашение на свадьбу</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -24,7 +24,7 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'IBM Plex Serif', sans-serif;
             background: linear-gradient(180deg, var(--cream) 0%, #FDFBF7 100%);
             color: var(--text-dark);
             line-height: 1.6;
@@ -64,19 +64,29 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
+    }
 
-/* Класс для блока с анимацией */
-.event-card.animate {
-    animation: slideUp 0.8s ease-out forwards;
-}
+        /* Класс для блока с анимацией */
+        .event-card.animate {
+            animation: slideUp 0.8s ease-out forwards;
+        }
 
-/* Начальное состояние (скрытое) */
-.event-card {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
+        /* Начальное состояние (скрытое) */
+        .event-card {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .photo-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .photo-section.animate {
+            animation: slideUp 0.8s ease-out forwards;
+        }
 
         /* Header Section */
         .header-section {
@@ -96,7 +106,7 @@
         }
 
         .couple-names {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cormorant SC', serif;
             font-size: 48px;
             font-weight: 300;
             color: var(--brown);
@@ -133,7 +143,7 @@
         }
 
         .event-title {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cormorant SC', serif;
             font-size: 32px;
             font-weight: 500;
             color: var(--brown);
@@ -163,7 +173,7 @@
         }
 
         .event-type {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cormorant SC', serif;
             font-size: 24px;
             font-weight: 500;
             color: #776400;
@@ -216,6 +226,7 @@
         /* Photo Section */
         .photo-section {      
             background: #f5f5f5; /* Цвет фона сайта */
+            overflow: hidden;
         }
 
         .couple-image {
@@ -231,7 +242,7 @@
         }
 
         .palette-title {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cormorant SC', serif;
             font-size: 28px;
             font-weight: 500;
             color: var(--brown);
@@ -352,7 +363,7 @@
         }
 
         .details-title {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cormorant SC', serif;
             font-size: 32px;
             font-weight: 500;
             color:  #776400;
@@ -387,7 +398,7 @@
         }
 
         .form-title {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cormorant SC', serif;
             font-size: 32px;
             font-weight: 500;
             color: var(--brown);
@@ -414,7 +425,7 @@
             padding: 12px 15px;
             border: 2px solid var(--cream);
             border-radius: 8px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'IBM Plex Serif', sans-serif;
             font-size: 14px;
             transition: border-color 0.3s ease;
             background: #FAFAFA;
@@ -457,7 +468,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(212, 165, 165, 0.3);
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'IBM Plex Serif', sans-serif;
         }
 
         .submit-button:hover {
@@ -488,7 +499,7 @@
         }
 
         .final-text {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cormorant SC', serif;
             font-size: 36px;
             font-weight: 500;
             color: white;
@@ -516,7 +527,7 @@
         }
 
         .success-message h3 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cormorant SC', serif;
             font-size: 28px;
             color: white;
             margin-bottom: 10px;
@@ -556,7 +567,7 @@
     padding: 2rem;
     border-radius: 0px 0px 300px 300px; /* Закругление всех углов */
 ">
-    <h1 style="font-size: 3rem; margin-bottom: 1rem; margin-top: 10rem;">Данила & Вероника</h1>
+    <h1 style="font-size: 3.2rem; margin-bottom: 1rem; margin-top: 20rem; font-family: 'Cormorant SC', serif;">Данила & Вероника</h1>
     <p style="font-size: 1.5rem; max-width: 800px;">
         Приглашаем вас разделить с нами праздник, в который мы станем семьёй!
     </p>
@@ -611,7 +622,7 @@
 </div>
 </section>
         <!-- Photo Section 1 -->
-        <section class="photo-section" >
+        <section class="photo-section" style = "box-shadow: 0 rgba(0, 0, 0, 0.0)">
             <img src=".\img\photo_2026-01-28_20-49-33.jpg" alt="Фото пары 1" class="couple-image" id="photo1">
         </section>
 
@@ -648,7 +659,6 @@
         padding: 0.7rem 1.5rem;
         border-radius: 30px;
         text-decoration: none;
-        /*font-weight: bold;*/
         display: inline-block;
         margin-top: 1rem;
     ">
@@ -658,24 +668,14 @@
         </section>
 
         <!-- Photo Section 2 -->
-        <section class="photo-section" style="border-radius: 25px 25px 25px 25px; ">
+        <section class="photo-section" style = "box-shadow: 0 rgba(0, 0, 0, 0.0)">
             <img src=".\img\photo_2026-01-28_20-49-36.jpg" alt="Фото пары 2" class="couple-image" id="photo2">
         </section>
 
         <!-- Color Palette Section -->
         <section class="section palette-section" >
-            <p class="palette-subtitle" style="font-size: 30px;">
+            <p class="palette-subtitle" style="font-size: 26px;">
                 Мы будем рады, если вы поддержите нежную цветовую гамму нашего праздника</p>
-             <!--
-            <div class="color-circles">
-                <div class="color-circle" style="background: #F5E6D3;"></div>
-                <div class="color-circle" style="background: #E8D4C4;"></div>
-                <div class="color-circle" style="background: #D4A5A5;"></div>
-                <div class="color-circle" style="background: #A8B5A0;"></div>
-                <div class="color-circle" style="background: #B8A89A;"></div>
-                <div class="color-circle" style="background: #9B8B7E;"></div>
-            </div>
-             -->
             <div class="color-swatches">
                 <div class="color-swatch beige" style="background: #dcccbd;" data-name="Бежевый" ></div>
                 <div class="color-swatch pink" style="background: #c09d9b;" data-name="Пыльная роза" ></div>
@@ -691,112 +691,38 @@
         <section class="section details-section" style="margin-top: 0px;">
             <p class="details-title" style="font-size: 60px;">ДЕТАЛИ</p>
                 <div style="margin-bottom: 20px; text-align: left; max-width: 60%;">
-    <p style="margin-bottom: 5px; font-family: 'Cormorant Garamond'; font-weight: bold; font-size: 26px;">ЦЕРЕМОНИЯ</p>
-    <p>Приходите, пожалуйста, за 30 минут до торжественной церемонии — эти минуты ожидания так важны для нас.</p>
+    <p style="margin-bottom: 5px; font-family: 'Cormorant SC'; font-weight: bold; font-size: 26px;">ЦЕРЕМОНИЯ</p>
+    <p style="font-style: italic;">Приходите, пожалуйста, за 30 минут до торжественной церемонии — эти минуты ожидания так важны для нас.</p>
 </div>
 
 <div style="margin-bottom: 20px; text-align: right; max-width: 60%; margin-left: auto;">
-    <p style="margin-bottom: 5px; font-family: 'Cormorant Garamond'; font-weight: bold; font-size: 26px;">БАНКЕТ</p>
-    <p>На праздничный банкет просьба приходить ровно в срок. Вас будут ожидать много приятных сюрпризов, которые мы уже готовим!</p>
+    <p style="margin-bottom: 5px; font-family: 'Cormorant SC'; font-weight: bold; font-size: 26px;">БАНКЕТ</p>
+    <p style="font-style: italic;">На праздничный банкет просьба приходить ровно в срок. Вас будут ожидать много приятных сюрпризов, которые мы уже готовим!</p>
 </div>
 
 <div style="margin-bottom: 20px; text-align: left; max-width: 60%;">
-    <p style="margin-bottom: 5px; font-family: 'Cormorant Garamond'; font-weight: bold; font-size: 26px;">ПОДАРКИ</p>
-    <p>Что касается подарков: ваше присутствие — уже самый лучший подарок. Но если захотите вложить частичку добра в наше будущее — мы примем с благодарностью конвертик на исполнение наших первых семейных мечт.</p>
+    <p style="margin-bottom: 5px; font-family: 'Cormorant SC'; font-weight: bold; font-size: 26px;">ПОДАРКИ</p>
+    <p style="font-style: italic;">Что касается подарков: ваше присутствие — уже самый лучший подарок. Но если захотите вложить частичку добра в наше будущее — мы примем с благодарностью конвертик на исполнение наших первых семейных мечт.</p>
 </div>
 
 <div style="margin-bottom: 20px; text-align: right; max-width: 60%; margin-left: auto;">
-    <p style="margin-bottom: 5px; font-family: 'Cormorant Garamond'; font-weight: bold; font-size: 26px;">ЦВЕТЫ</p>
-    <p>Цветы мы попросили бы заменить конвертом — так ваша поддержка останется с нами надолго.</p>
+    <p style="margin-bottom: 5px; font-family: 'Cormorant SC'; font-weight: bold; font-size: 26px;">ЦВЕТЫ</p>
+    <p style="font-style: italic;">Цветы мы попросили бы заменить конвертом — так ваша поддержка останется с нами надолго.</p>
 </div>
-                <!--<ol>
-                    <li>Приходите, пожалуйста, за 30 минут до торжественной церемонии — эти минуты ожидания так важны для нас.</li>
-                    <li>На праздничный банкет просьба приходить ровно в срок. Вас будут ожидать много приятных сюрпризов, которые мы уже готовим!</li>
-                    <li>Что касается подарков: ваше присутствие — уже самый лучший подарок. Но если захотите вложить частичку добра в наше будущее — мы примем с благодарностью конвертик на исполнение наших первых семейных мечт.</li>
-                    <li>Цветы мы попросили бы заменить конвертом — так ваша поддержка останется с нами надолго.</li>
-                </ol>  -->
-            <!--<div class="details-list" style="font-size: 16px;"></div>
-            </div>  -->
+
         </section>
 
         <!-- Photo Section 3 -->
-        <section class="photo-section" style="border-radius: 25px 25px 25px 25px; margin-top: 3rem;">
+        <section class="photo-section" style = "box-shadow: 0 rgba(0, 0, 0, 0.0)">
             <img src=".\img\photo_2026-01-28_20-49-34.jpg" alt="Фото пары 3" class="couple-image" id="photo3">
         </section>
 
         <!-- Form Section -->
         <section class="section form-section">
-            <h2 class="form-title">Будем рады, если вы ответите на пару вопросов:</h2>
+            <h2 class="form-title" style="color:  #776400;">Будем рады, если вы ответите на пару вопросов:</h2>
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScY8Eau8NBcEtxLVKqqgPb7yy5bQm6HJ0wf4l8k1PqRJ9EUpw/viewform?embedded=true" 
             style="width: 100%; height: 800px; border: none;" 
             frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
-            <!--
-            <form id="rsvp-form">
-                <div class="form-group">
-                    <label for="food-preferences">Постараемся учесть ваши предпочтения по еде:</label>
-                    <textarea id="food-preferences" name="food-preferences" rows="3" placeholder="Например: не ем курицу, люблю рыбу..."></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="allergies">Даже укажите, есть ли у вас аллергия на продукты:</label>
-                    <input type="text" id="allergies" name="allergies" placeholder="Например: орехи, морепродукты...">
-                </div>
-
-                <div class="form-group">
-                    <label>Алкоголь:</label>
-                    <div class="checkbox-group">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="whiskey" name="alcohol" value="Виски">
-                            <label for="whiskey">Виски</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="vodka" name="alcohol" value="Водка">
-                            <label for="vodka">Водка</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="liquor" name="alcohol" value="Ликер">
-                            <label for="liquor">Ликер</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="cognac" name="alcohol" value="Коньяк">
-                            <label for="cognac">Коньяк</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="wine" name="alcohol" value="Вино">
-                            <label for="wine">Вино</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="after-party">Автопати???</label>
-                    <select id="after-party" name="after-party">
-                        <option value="">Выберите ответ</option>
-                        <option value="Да">Да, буду!</option>
-                        <option value="Нет">Нет, спасибо</option>
-                        <option value="Может быть">Может быть</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="attendance">Подтвердите присутствие</label>
-                    <select id="attendance" name="attendance" required>
-                        <option value="">Выберите ответ</option>
-                        <option value="Буду на церемонии и банкете">Буду на церемонии и банкете</option>
-                        <option value="Буду только на церемонии">Буду только на церемонии</option>
-                        <option value="Буду только на банкете">Буду только на банкете</option>
-                        <option value="К сожалению, не смогу прийти">К сожалению, не смогу прийти</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="submit-button">Отправить ответ</button>
-            </form>
-
-            <div class="success-message" id="success-message">
-                <h3>Спасибо за ответ!</h3>
-                <p>Мы учтём все ваши пожелания ❤️</p>
-            </div>
-            -->
         </section>
 
         <!-- Final Section -->
@@ -814,7 +740,7 @@
             color: white;
             padding: 2rem;
             border-radius: 300px 300px 0px 0px;">
-    <h2 class="final-text" style="font-size: 3.5rem; margin: 0; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+    <h2 class="final-text" style="font-size: 3.5rem; margin: 0; text-shadow: 0 2px 10px rgba(0,0,0,0.2); ">
         ДО ВСТРЕЧИ!
     </h2>
 </section>
@@ -858,62 +784,14 @@
     const eventCards = document.querySelectorAll('.event-card');
     eventCards.forEach(card => {
         observer.observe(card);
-        });
     });
 
-
-        // Form submission
-        document.getElementById('rsvp-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const submitButton = this.querySelector('.submit-button');
-            submitButton.disabled = true;
-            submitButton.textContent = 'Отправка...';
-
-            // Collect form data
-            const formData = new FormData(this);
-            const data = {
-                guestName: document.getElementById('guest-name').textContent,
-                foodPreferences: formData.get('food-preferences'),
-                allergies: formData.get('allergies'),
-                alcohol: Array.from(this.querySelectorAll('input[name="alcohol"]:checked')).map(cb => cb.value).join(', '),
-                afterParty: formData.get('after-party'),
-                attendance: formData.get('attendance')
-            };
-
-            // Send email using FormSubmit
-            try {
-                const response = await fetch('https://formsubmit.co/ajax/ampleevdd@mail.ru', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        _subject: `Ответ на приглашение от ${data.guestName}`,
-                        _template: 'table',
-                        'Имя гостя': data.guestName,
-                        'Предпочтения по еде': data.foodPreferences || 'Не указано',
-                        'Аллергии': data.allergies || 'Нет',
-                        'Алкоголь': data.alcohol || 'Не указано',
-                        'Автопати': data.afterParty || 'Не указано',
-                        'Присутствие': data.attendance
-                    })
-                });
-
-                if (response.ok) {
-                    // Show success message
-                    document.getElementById('success-message').classList.add('show');
-                    this.style.display = 'none';
-                } else {
-                    throw new Error('Ошибка отправки');
-                }
-            } catch (error) {
-                alert('Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз или свяжитесь с нами напрямую.');
-                submitButton.disabled = false;
-                submitButton.textContent = 'Отправить ответ';
-            }
-        });
+    // Наблюдаем за фото-секциями
+    const photoSections = document.querySelectorAll('.photo-section');
+    photoSections.forEach(sec => {
+        observer.observe(sec);
+    });
+    });
 
         // Add smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
