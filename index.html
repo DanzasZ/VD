@@ -81,6 +81,19 @@
             border-radius: 0px 0px 300px 300px; /* Закругление всех углов */
         }
 
+        .invitetext{
+            font-size: 1.1rem; 
+            max-width: 800px; 
+            padding-bottom: 15%;
+        }
+
+        @media (min-width: 400px) {
+            .invitetext {
+                font-size: 1.4rem; 
+                padding-bottom: 0%;
+                }
+        } 
+
         /* Класс для блока с анимацией */
         .event-card.animate {
             animation: slideUp 0.8s ease-out forwards;
@@ -511,7 +524,7 @@
         <!-- Замените первый блок на этот код -->
 <div class="hero-section">
     <h1 style="font-size: 4rem; margin-bottom: 1rem; margin-top: 20rem; font-family: 'Great Vibes', italic;">Данила & Вероника</h1>
-    <p id="invite-text" style="font-size: 1.5rem; max-width: 800px; padding-bottom: 10%;">
+    <p class ="invitetext" id="invite-text" >
         Приглашаем вас разделить с нами праздник, в который мы станем семьёй!
     </p>
 </div>
@@ -689,12 +702,12 @@
     </h2>
 </section>
     </div>
-            // Приглашаем вас разделить с нами праздник, в который мы станем семьёй!
+    
     <script>
         // Guest name mapping
         const guestNames = {
             '1': 'Гоша и Тома',
-            '2': 'Женя и Наста',
+            '2': 'Женя и Настя',
             '3': 'Федя и Лиза',
             '4': 'Миша и Василиса',
             '5': 'Даня и Настя',
@@ -729,14 +742,12 @@
             if (!guestId || !guestNames[guestId]) {
                 // Нет параметра или неизвестный ID
                 inviteTextEl.textContent = 'Приглашаем вас разделить с нами праздник, в который мы станем семьёй!';
-                document.getElementById('guest-name').textContent = '...';
             } else {
                 const name = guestNames[guestId];
-                document.getElementById('guest-name').textContent = name;
 
                 if (singleGuestIds.includes(guestId)) {
                     // Одно имя → "тебя"
-                    inviteTextEl.textContent = name + ', приглашаем тебя разделить с нами праздник, в который мы станем семьёй!';
+                    inviteTextEl.textContent =  name + ', приглашаем тебя разделить с нами праздник, в который мы станем семьёй!';
                 } else {
                     // Два имени → "вас"
                     inviteTextEl.textContent = name + ', приглашаем вас разделить с нами праздник, в который мы станем семьёй!';
