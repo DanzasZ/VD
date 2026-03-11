@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Приглашение на свадьбу</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Great+Vibes&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -510,8 +510,8 @@
         
         <!-- Замените первый блок на этот код -->
 <div class="hero-section">
-    <h1 style="font-size: 3.2rem; margin-bottom: 1rem; margin-top: 20rem; font-family: 'Cormorant SC', serif;">Данила & Вероника</h1>
-    <p style="font-size: 1.5rem; max-width: 800px; padding-bottom: 10%;">
+    <h1 style="font-size: 4rem; margin-bottom: 1rem; margin-top: 20rem; font-family: 'Great Vibes', italic;">Данила & Вероника</h1>
+    <p id="invite-text" style="font-size: 1.5rem; max-width: 800px; padding-bottom: 10%;">
         Приглашаем вас разделить с нами праздник, в который мы станем семьёй!
     </p>
 </div>
@@ -689,27 +689,59 @@
     </h2>
 </section>
     </div>
-
+            // Приглашаем вас разделить с нами праздник, в который мы станем семьёй!
     <script>
         // Guest name mapping
         const guestNames = {
-            '1': 'Настя',
-            '2': 'Степа',
-            '3': 'Даша'
+            '1': 'Гоша и Тома',
+            '2': 'Женя и Наста',
+            '3': 'Федя и Лиза',
+            '4': 'Миша и Василиса',
+            '5': 'Даня и Настя',
+            '6': 'Костя',
+            '7': 'Илья',
+            '8': 'Максим и Маргарита',
+            '9': 'Влад и Даша',
+            '10': 'Павел и Полина',
+            '11': 'Степа и Настя',
+            '12': 'Артем и Даша',
+            '13': 'Лера',
+            '14': 'Влада',
+            '15': 'Ваня',
+            '16': 'Даша' // Гвоздюкова
             // Добавьте больше имен по необходимости
         };
 
-        // Get guest name from URL
-        function getGuestName() {
+        // IDs с одним именем (обращение на "тебя")
+        const singleGuestIds = ['6', '7', '13', '14', '15', '16'];
+
+        // Get guest id from URL
+        function getGuestId() {
             const urlParams = new URLSearchParams(window.location.search);
-            const guestId = urlParams.get('name');
-            return guestNames[guestId] || '...';
+            return urlParams.get('name');
         }
 
-        // Set guest name on page load
+        // Set guest name and invite text on page load
         document.addEventListener('DOMContentLoaded', function() {
-            const guestName = getGuestName();
-            document.getElementById('guest-name').textContent = guestName;
+            const guestId = getGuestId();
+            const inviteTextEl = document.getElementById('invite-text');
+
+            if (!guestId || !guestNames[guestId]) {
+                // Нет параметра или неизвестный ID
+                inviteTextEl.textContent = 'Приглашаем вас разделить с нами праздник, в который мы станем семьёй!';
+                document.getElementById('guest-name').textContent = '...';
+            } else {
+                const name = guestNames[guestId];
+                document.getElementById('guest-name').textContent = name;
+
+                if (singleGuestIds.includes(guestId)) {
+                    // Одно имя → "тебя"
+                    inviteTextEl.textContent = name + ', приглашаем тебя разделить с нами праздник, в который мы станем семьёй!';
+                } else {
+                    // Два имени → "вас"
+                    inviteTextEl.textContent = name + ', приглашаем вас разделить с нами праздник, в который мы станем семьёй!';
+                }
+            }
         });
 
         document.addEventListener('DOMContentLoaded', function() {
