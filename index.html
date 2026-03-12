@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Приглашение на свадьбу</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Great+Vibes&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Viaoda+Libre&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -80,6 +80,19 @@
             padding: 5vh;
             border-radius: 0px 0px 300px 300px; /* Закругление всех углов */
         }
+
+        .NAMES{
+            font-size: 2.5em; 
+            margin-bottom: 1rem; 
+            margin-top: 20rem; 
+            font-family: 'Cormorant SC', serif;
+        }
+
+        @media (min-width: 400px) {
+            .NAMES {
+                font-size: 3em; 
+                }
+        } 
 
         .invitetext{
             font-size: 1.1rem; 
@@ -474,6 +487,13 @@
             font-weight: 500;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            padding-top: 2em;
+        }
+
+        @media (min-width: 900px) {
+            .final-text{
+                padding-top: 0vh;
+                }
         }
 
         /* Success Message */
@@ -515,6 +535,7 @@
             background: var(--dusty-rose);
             margin: 20px auto;
         }
+        /*Данила & Вероника*/
     </style>
 </head>
 <body>
@@ -523,7 +544,7 @@
         
         <!-- Замените первый блок на этот код -->
 <div class="hero-section">
-    <h1 style="font-size: 4rem; margin-bottom: 1rem; margin-top: 20rem; font-family: 'Great Vibes', italic;">Данила & Вероника</h1>
+    <h1 class="NAMES">ДАНИЛА & ВЕРОНИКА</h1> 
     <p class ="invitetext" id="invite-text" >
         Приглашаем вас разделить с нами праздник, в который мы станем семьёй!
     </p>
@@ -706,22 +727,26 @@
     <script>
         // Guest name mapping
         const guestNames = {
-            '1': 'Гоша и Тома',
-            '2': 'Женя и Настя',
-            '3': 'Федя и Лиза',
-            '4': 'Миша и Василиса',
-            '5': 'Даня и Настя',
-            '6': 'Костя',
+            '1': 'Георгий и Тамара',
+            '2': 'Евгений и Анастасия',
+            '3': 'Фёдр и Елизавета',
+            '4': 'Михаил и Василиса',
+            '5': 'Данила и Анастасия',
+            '6': 'Константин',
             '7': 'Илья',
             '8': 'Максим и Маргарита',
-            '9': 'Влад и Даша',
+            '9': 'Владислав и Дарья',
             '10': 'Павел и Полина',
-            '11': 'Степа и Настя',
-            '12': 'Артем и Даша',
-            '13': 'Лера',
+            '11': 'Степан и Анастасия',
+            '12': 'Артем и Дарья',
+            '13': 'Валерия',
             '14': 'Влада',
             '15': 'Ваня',
-            '16': 'Даша' // Гвоздюкова
+            '16': 'Татьяна',
+            '17': 'Оксана',
+            '18': 'Вячеслав и Надежда',
+            '19': 'Анна',
+            '20': 'Дарья' // Гвоздюкова
             // Добавьте больше имен по необходимости
         };
 
@@ -747,7 +772,7 @@
 
                 if (singleGuestIds.includes(guestId)) {
                     // Одно имя → "тебя"
-                    inviteTextEl.textContent =  name + ', приглашаем тебя разделить с нами праздник, в который мы станем семьёй!';
+                    inviteTextEl.textContent =  name + ', приглашаем вас разделить с нами праздник, в который мы станем семьёй!';
                 } else {
                     // Два имени → "вас"
                     inviteTextEl.textContent = name + ', приглашаем вас разделить с нами праздник, в который мы станем семьёй!';
